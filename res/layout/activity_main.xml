@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CompareView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fillViewport="true"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/selfImg"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/head_default_local" />
+
+                <TextView
+                    android:id="@+id/selfName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dip"
+                    android:gravity="center_vertical"
+                    android:text="小李" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/rank_vs_two" />
+
+                <ImageView
+                    android:layout_width="1dip"
+                    android:layout_height="35dip"
+                    android:layout_gravity="center"
+                    android:background="#1bfff2"
+                    android:gravity="center"
+                    android:text="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/friend1Img"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/head_default_local" />
+
+                <TextView
+                    android:id="@+id/friend1Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dip"
+                    android:gravity="center_vertical"
+                    android:text="小强" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.wht.compareview.CompareView
+            android:id="@+id/compareView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CompareView:leftRectColor="#58b2ff"
+            CompareView:lineHight="40dip"
+            CompareView:rectHight="35dip"
+            CompareView:rightRectColor="#fd6e6e"
+            CompareView:textSize="14sp" />
+    </LinearLayout>
+
+</ScrollView>
